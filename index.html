@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CallEight — eight-bar call-and-response desk</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tap-gate" class="tap-gate">
+  <button id="tap-btn">Tap to start audio</button>
+  <p>iOS: silent switch mutes Web Audio.</p>
+</div>
+<header>
+  <h1>CallEight</h1>
+  <p>Eight-bar call-and-response desk. The loop you already have talks to itself so it finally finishes.</p>
+  <div id="status">Seating chairs…</div>
+</header>
+<main>
+  <section class="controls">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="92"></label>
+    <label>Key
+      <select id="key">
+        <option value="0">C</option>
+        <option value="2">D</option>
+        <option value="4">E</option>
+        <option value="5">F</option>
+        <option value="7">G</option>
+        <option value="9">A</option>
+        <option value="-3">Am</option>
+        <option value="-1">Dm</option>
+        <option value="2">Em</option>
+      </select>
+    </label>
+    <label>Bars <input type="number" id="bars" min="4" max="16" value="8"></label>
+  </section>
+  <section class="recipes">
+    <h2>Recipe</h2>
+    <div id="recipe-list"></div>
+  </section>
+  <section class="transport">
+    <button id="play-a">A · Thin</button>
+    <button id="play-b">B · Call</button>
+    <button id="stop">Stop</button>
+  </section>
+  <div id="playhead" class="playhead"></div>
+  <section class="export">
+    <button id="export-wav">Export WAV (loop)</button>
+    <button id="export-wav-tail">Export WAV (with tail)</button>
+    <button id="export-mid">Export MIDI</button>
+    <div id="export-status"></div>
+  </section>
+  <section class="punch">
+    <h2>Punch list</h2>
+    <pre id="punch">A is the static pocket. B seats a short call and an answering chair so the eight bars converse instead of photocopying.</pre>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

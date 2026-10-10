@@ -1,0 +1,9 @@
+{
+  "name": "calleight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Eight-bar call-and-response desk for bedroom producers and AI-music finishers",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}
